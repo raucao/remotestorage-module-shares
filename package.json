@@ -1,7 +1,7 @@
 {
   "name": "remotestorage-module-shares",
-  "version": "0.3.0",
-  "description": "remoteStorage shares module",
+  "version": "1.0.0",
+  "description": "remoteStorage.js module for sharing images and other files",
   "main": "./dist/build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,19 @@
     "build": "NODE_ENV=production webpack"
   },
   "author": "Sebastian Kippe <sebastian@kip.pe>",
-  "license": "AGPL-3.0",
+  "contributors": [
+    "Garret Alfert <alfert@wevelop.de>"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
     "webpack": "^1.13.2"
-  }
+  },
+  "keywords": [
+    "remotestorage",
+    "remotestorage-module"
+  ]
+
 }
