@@ -52,7 +52,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -282,8 +282,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      thumbBase64 = thumbBase64.split(',')[1]; // remove type prefix
 	      var thumbData = this._base64DecToArr(thumbBase64);
 
-	      debugger;
-
 	      publicClient.storeFile('image/png', 'thumbnails/' + name + '.png', thumbData);
 	    },
 
@@ -299,18 +297,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  };
 
-	  return {
-	    exports: shares
-	  };
+	  return { exports: shares };
 	});
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;

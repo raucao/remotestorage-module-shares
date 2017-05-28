@@ -237,8 +237,6 @@ RemoteStorage.defineModule('shares', function(privateClient, publicClient) {
       thumbBase64 = thumbBase64.split(',')[1]; // remove type prefix
       var thumbData = this._base64DecToArr(thumbBase64);
 
-      debugger;
-
       publicClient.storeFile('image/png', 'thumbnails/'+name+'.png', thumbData);
     },
 
@@ -254,9 +252,6 @@ RemoteStorage.defineModule('shares', function(privateClient, publicClient) {
 
   };
 
-  return {
-    exports: shares
-  };
-
+  return { exports: shares };
 });
 
