@@ -1,6 +1,6 @@
 {
   "name": "remotestorage-module-shares",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remoteStorage.js module for sharing images and other files",
   "main": "./dist/build.js",
   "scripts": {
@@ -23,8 +23,8 @@
     "remotestorage",
     "remotestorage-module"
   ],
-  "repository":   {
-    "type" : "git",
-    "url" : "https://github.com/skddc/remotestorage-module-shares"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skddc/remotestorage-module-shares"
   }
 }
