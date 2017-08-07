@@ -8,11 +8,9 @@
  * For images, thumbnails are created and stored in a subdirectory.
  */
 
-var RemoteStorage = require('remotestoragejs');
+const sharesBuilder = function(privateClient, publicClient) {
 
-RemoteStorage.defineModule('shares', function(privateClient, publicClient) {
-
-  var shares = {
+  const shares = {
     /**
      * Method: storeFile
      *
@@ -253,5 +251,6 @@ RemoteStorage.defineModule('shares', function(privateClient, publicClient) {
   };
 
   return { exports: shares };
-});
+};
 
+export default { name: 'shares', builder: sharesBuilder };
