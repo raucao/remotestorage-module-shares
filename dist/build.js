@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("remotestoragejs"));
+		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(["remotestoragejs"], factory);
+		define([], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("remotestoragejs")) : factory(root["RemoteStorage"]);
+		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -52,10 +52,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	/**
 	 * File: Shares
 	 *
@@ -66,9 +69,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * For images, thumbnails are created and stored in a subdirectory.
 	 */
 
-	var RemoteStorage = __webpack_require__(1);
-
-	RemoteStorage.defineModule('shares', function (privateClient, publicClient) {
+	var sharesBuilder = function sharesBuilder(privateClient, publicClient) {
 
 	  var shares = {
 	    /**
@@ -298,13 +299,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 
 	  return { exports: shares };
-	});
+	};
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+	exports.default = { name: 'shares', builder: sharesBuilder };
 
 /***/ })
 /******/ ])
