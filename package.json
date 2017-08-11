@@ -1,6 +1,6 @@
 {
   "name": "remotestorage-module-shares",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "remoteStorage.js module for sharing images and other files",
   "main": "./dist/build.js",
   "scripts": {
