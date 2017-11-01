@@ -11,7 +11,7 @@ created and stored in a subdirectory.
 
 * [shares](#module_shares)
     * [storeFile(mimeType, name, data)](#exp_module_shares--storeFile) ⇒ <code>Promise</code> ⏏
-    * [remove(name)](#exp_module_shares--remove) ⏏
+    * [remove(name)](#exp_module_shares--remove) ⇒ <code>Promise</code> ⏏
     * [list()](#exp_module_shares--list) ⇒ <code>Promise</code> ⏏
     * [getFileURL(name)](#exp_module_shares--getFileURL) ⇒ <code>string</code> ⏏
 
@@ -38,7 +38,7 @@ remoteStorage.shares.storeFile(mimeType, filename, content)
 ```
 <a name="exp_module_shares--remove"></a>
 
-### remove(name) ⏏
+### remove(name) ⇒ <code>Promise</code> ⏏
 Remove a file
 
 **Kind**: Exported function  
