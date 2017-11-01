@@ -31,6 +31,11 @@ Stores a shared file
 | name | <code>string</code> | Filename |
 | data | <code>ArrayBuffer</code> | File contents |
 
+**Example**  
+```js
+remoteStorage.shares.storeFile(mimeType, filename, content)
+  .then((url) => { console.log(`successfully stored file at ${url}`)
+```
 <a name="exp_module_shares--remove"></a>
 
 ### remove(name) ⏏

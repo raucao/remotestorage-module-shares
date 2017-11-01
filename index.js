@@ -21,6 +21,11 @@ const sharesBuilder = function(privateClient, publicClient) {
      *
      * @alias module:shares
      * @public
+     *
+     * @example
+     *
+     * remoteStorage.shares.storeFile(mimeType, filename, content)
+     *   .then((url) => { console.log(`successfully stored file at ${url}`)
      */
     storeFile: function(mimeType, name, data) {
       var date = this._formattedDate(new Date());
@@ -40,6 +45,8 @@ const sharesBuilder = function(privateClient, publicClient) {
      * Remove a file
      *
      * @param {string} name - The filename
+     *
+     * @returns {Promise}
      *
      * @alias module:shares
      * @public
