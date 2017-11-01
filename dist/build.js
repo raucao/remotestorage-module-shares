@@ -60,31 +60,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	/**
-	 * File: Shares
+	 * A remoteStorage data module for sharing of files.
 	 *
-	 * Maintainer: - Sebastian Kippe <sebastian@kip.pe>
-	 * Version: -    0.3.0
+	 * All shares are stored with a timestamp prefix. For images, thumbnails are
+	 * created and stored in a subdirectory.
 	 *
-	 * Manages sharing of files. All shares are stored with a timestamp prefix.
-	 * For images, thumbnails are created and stored in a subdirectory.
+	 * @module shares
 	 */
-
 	var sharesBuilder = function sharesBuilder(privateClient, publicClient) {
 
 	  var shares = {
 	    /**
-	     * Method: storeFile
-	     *
 	     * Stores a shared file
 	     *
-	     * Parameters:
-	     *   mimeType - the picture MIME type.
-	     *   name     - the picture name.
-	     *   data     - the picture (expected as an `ArrayBuffer`).
+	     * @param {string} mimeType  - Content type of the file
+	     * @param {string} name      - Filename
+	     * @param {ArrayBuffer} data - File contents
 	     *
-	     * Returns:
-	     *   A promise, which will be fulfilled with the absolute URL of the newly
-	     *    uploaded file (see <getFileURL>).
+	     * @returns {Promise} A promise, which will be fulfilled with the absolute
+	     *                    URL of the newly uploaded file (see <getFileURL>)
+	     *
+	     * @alias module:shares
+	     * @public
 	     */
 	    storeFile: function storeFile(mimeType, name, data) {
 	      var date = this._formattedDate(new Date());
@@ -100,12 +97,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    /**
-	     * Method: remove
-	     *
 	     * Remove a file
 	     *
-	     * Parameters:
-	     *   name - the filename.
+	     * @param {string} name - The filename
+	     *
+	     * @alias module:shares
+	     * @public
 	     */
 	    remove: function remove(name) {
 	      publicClient.remove('thumbnails/' + name + '.png');
@@ -113,12 +110,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    /**
-	     * Method: listFiles
-	     *
 	     * List all shared files
 	     *
-	     * Returns:
-	     *   An array containing the filenames.
+	     * @returns {Promise} Resolves with an array containing the filenames
+	     *
+	     * @alias module:shares
+	     * @public
 	     */
 	    list: function list() {
 	      var self = this;
@@ -134,15 +131,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    /**
-	     * Method: getFileURL
-	     *
 	     * Get the absolute URL of a file.
 	     *
-	     * Parameters:
-	     *   name - the filename.
+	     * @param {string} name - the filename
 	     *
-	     * Returns:
-	     *   The absolute URL of the file.
+	     * @returns {string} The absolute URL of the file
+	     *
+	     * @alias module:shares
+	     * @public
 	     */
 	    getFileURL: function getFileURL(name) {
 	      return publicClient.getItemURL(name);
@@ -153,15 +149,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    /**
-	     * Method: _formattedDate
-	     *
 	     * Helper method for formatting dates for filenames
 	     *
-	     * Parameters:
-	     *   date - a Date object
+	     * @param {date} date - a Date object
 	     *
-	     * Returns:
-	     *   A formatted date string, like e.g. '131106-1523'
+	     * @returns {string} A formatted date string, like e.g. '131106-1523'
+	     *
+	     * @private
 	     */
 
 	    _formattedDate: function _formattedDate(date) {
