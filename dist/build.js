@@ -82,6 +82,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     *
 	     * @alias module:shares
 	     * @public
+	     *
+	     * @example
+	     *
+	     * remoteStorage.shares.storeFile(mimeType, filename, content)
+	     *   .then((url) => { console.log(`successfully stored file at ${url}`)
 	     */
 	    storeFile: function storeFile(mimeType, name, data) {
 	      var date = this._formattedDate(new Date());
@@ -100,6 +105,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Remove a file
 	     *
 	     * @param {string} name - The filename
+	     *
+	     * @returns {Promise}
 	     *
 	     * @alias module:shares
 	     * @public
