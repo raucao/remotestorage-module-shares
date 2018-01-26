@@ -289,7 +289,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _removeDirectoryKeysFromListing: function _removeDirectoryKeysFromListing(listing) {
 	      Object.keys(listing).forEach(function (key) {
-	        console.log(key);
 	        if (key.match(/\/$/)) {
 	          delete listing[key];
 	        }
