@@ -241,7 +241,6 @@ const sharesBuilder = function(privateClient, publicClient) {
 
     _removeDirectoryKeysFromListing: function(listing) {
       Object.keys(listing).forEach(function(key){
-        console.log(key);
         if (key.match(/\/$/)) {
           delete listing[key];
         }
